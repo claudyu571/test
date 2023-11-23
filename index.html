@@ -11,12 +11,16 @@
             font-family: Arial, sans-serif;
             overflow: hidden;
             color: #fff;
-            background: url('Northern_lights.jpg') center center fixed;
-            background-size: cover;
         }
 
         video {
-            display: none; /* Hide the video on mobile */
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
 
         .content {
@@ -26,6 +30,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             width: 100%;
+            padding: 0 20px; /* Add padding to the content for better mobile appearance */
         }
 
         h1, p {
@@ -33,8 +38,8 @@
         }
 
         .server-link {
-            display: inline-block;
-            margin: 10px 10px;
+            display: block; /* Change to block to ensure full width on mobile */
+            margin: 10px auto; /* Center the buttons horizontally with auto margins */
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
@@ -59,24 +64,6 @@
 
         .server-link:hover {
             opacity: 0.8;
-        }
-
-        @media (min-width: 768px) {
-            /* Show the video on larger screens */
-            video {
-                display: block;
-                object-fit: cover;
-                width: 100%;
-                height: 100%;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: -1;
-            }
-            
-            body {
-                background: none; /* Remove background image on larger screens */
-            }
         }
     </style>
 </head>
