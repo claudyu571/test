@@ -57,7 +57,7 @@
 
         .server-link img {
             margin-right: 10px; /* Add spacing between the logo and text */
-            max-height: 24px; /* Set a max height for the logo */
+            max-height: 40px; /* Set a fixed height for the logo */
         }
 
         .server-link.email {
@@ -76,14 +76,12 @@
             background-color: #41B883; /* Home Assistant logo color */
         }
 
-        .server-link:hover {
-            opacity: 0.8;
+        .server-link.qbit {
+            background-color: #4E9AAB; /* Adjust color for qBittorrent button */
         }
 
-        @media (max-width: 600px) {
-            video {
-                display: none; /* Hide the video on mobile */
-            }
+        .server-link:hover {
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -107,6 +105,11 @@
                 <img src="HA_logo.png" alt="Home Assistant Logo">
                 Home Assistant Server
             </a>
+             <!-- New qBittorrent link -->
+            <a class="server-link qbit" href="https://qbit.hapics.uk" target="_blank">
+                <img src="qbit_logo.png" alt="qBittorrent Logo">
+                qBittorrent Server
+            </a>
             <a class="server-link email" href="mailto:claudiu.sandu@hapics.uk">
                 Email Us
             </a>
@@ -114,6 +117,7 @@
                 <img src="LinkedIn_logo.png" alt="LinkedIn Logo">
                 LinkedIn
             </a>
+           
         </div>
     </div>
 </body>
