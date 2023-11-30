@@ -33,18 +33,18 @@
         }
 
         h1, p {
-            color: #d3dfe6; /* Change text color to white */
+            color: #d3dfe6;
         }
 
         .server-links {
             display: flex;
-            flex-direction: column; /* Arrange buttons vertically on mobile */
-            align-items: center; /* Center buttons horizontally on mobile */
+            flex-direction: column;
+            align-items: center;
         }
 
         .server-link {
             display: flex;
-            align-items: center; /* Center content vertically in the button */
+            align-items: center;
             margin: 10px 10px;
             padding: 10px 20px;
             text-decoration: none;
@@ -56,40 +56,43 @@
         }
 
         .server-link img {
-            margin-right: 10px; /* Add spacing between the logo and text */
-            max-height: 24px; /* Set a max height for the logo */
+            margin-right: 10px;
+            max-height: 24px;
         }
 
         .server-link.email {
-            background-color: #dc3545; /* Red color for email button */
+            background-color: #dc3545;
         }
 
         .server-link.linkedin {
-            background-color: #0077b5; /* LinkedIn blue color */
+            background-color: #0077b5;
         }
 
         .server-link.plex {
-            background-color: #e5a00d; /* Plex logo color */
+            background-color: #e5a00d;
         }
 
         .server-link.smart {
-            background-color: #41B883; /* Home Assistant logo color */
+            background-color: #41B883;
         }
 
         .server-link.qbit {
-            background-color: #4E9AAB; /* Adjust color for qBittorrent button */
+            background-color: #4E9AAB;
         }
 
         .server-link:hover {
             opacity: 0.8;
         }
 
-        @media (max-width: 1170px) {
-            /* Set static background for smaller screens */
+        @media (max-width: 767px) {
             video {
-                display: none;
-                background: url('your-static-image.jpg') no-repeat center center fixed;
+                display: none; /* Hide video on small screens */
+            }
+
+            body {
+                background-image: url('0004.png');
                 background-size: cover;
+                background-position: center center;
             }
         }
     </style>
@@ -97,7 +100,6 @@
 
 <body>
     <video autoplay muted loop>
-        <!-- Replace 'your-video-file.mp4' with the actual path to your video file -->
         <source src="Northern_lights.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -115,7 +117,7 @@
                 Home Assistant Server
             </a>
              <!-- New qBittorrent link -->
-            <a class="server-link qbit" href="http://qbit.hapics.uk" target="_blank">
+            <a class="server-link qbit" href="https://qbit.hapics.uk" target="_blank">
                 <img src="qbit_logo.png" alt="qBittorrent Logo">
                 qBittorrent Server
             </a>
@@ -131,3 +133,4 @@
 </body>
 
 </html>
+
