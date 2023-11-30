@@ -11,6 +11,9 @@
             font-family: Arial, sans-serif;
             overflow: hidden;
             color: #fff;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
 
         video {
@@ -86,13 +89,11 @@
 
         @media (max-width: 767px) {
             video {
-                display: none; /* Hide video on small screens */
+                display: none;
             }
 
             body {
                 background-image: url('0004.png');
-                background-size: cover;
-                background-position: center center;
             }
         }
     </style>
@@ -108,7 +109,7 @@
         <h1>Welcome to HapiCS</h1>
         <p>Access your servers below:</p>
         <div class="server-links">
-            <a class="server-link plex" href="https://plex.hapics.uk" target="_blank">
+             <a class="server-link plex" href="https://plex.hapics.uk" target="_blank">
                 <img src="Plex_logo.png" alt="Plex Logo">
                 Plex Media Server
             </a>
@@ -133,4 +134,3 @@
 </body>
 
 </html>
-
