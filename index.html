@@ -9,11 +9,12 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            overflow: hidden;
+            overflow: auto; /* Allow scrolling */
             color: #fff;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            height: 100vh; /* Set body height to full viewport height */
         }
 
         video {
@@ -95,6 +96,10 @@
             body {
                 background-image: url('0004.png');
             }
+
+            .content {
+                height: 100%; /* Set content height to full viewport height */
+            }
         }
     </style>
 </head>
@@ -109,7 +114,7 @@
         <h1>Welcome to HapiCS</h1>
         <p>Access your servers below:</p>
         <div class="server-links">
-             <a class="server-link plex" href="https://plex.hapics.uk" target="_blank">
+            <a class="server-link plex" href="https://plex.hapics.uk" target="_blank">
                 <img src="Plex_logo.png" alt="Plex Logo">
                 Plex Media Server
             </a>
@@ -117,8 +122,8 @@
                 <img src="HA_logo.png" alt="Home Assistant Logo">
                 Home Assistant Server
             </a>
-             <!-- New qBittorrent link -->
-            <a class="server-link qbit" href="https://qbit.hapics.uk" target="_blank">
+            <!-- New qBittorrent link -->
+            <a class="server-link qbit" href="http://qbit.hapics.uk" target="_blank">
                 <img src="qbit_logo.png" alt="qBittorrent Logo">
                 qBittorrent Server
             </a>
